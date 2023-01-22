@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Project Cubes</title>
+		<link rel="stylesheet" href="styles/app-UOQZFSTY.css">
+		<script src="scripts/app-FIX6PDVG.js" defer></script>
+		<link rel="icon" type="image/svg+xml" href="assets/favicon-AU4ODCYT.svg">
+		<link rel="icon" type="image/png" href="assets/favicon-6AJJPJJD.png">
+		<meta name="description" content="A game of cubical objects, allowing creativity to be unfolded in a world of possibilities">
+		<meta property="og:url" content="0mds.github.io/project-cubes">
+		<meta property="og:title" content="Project Cubes">
+		<meta property="og:description" content="A game of cubical objects, allowing creativity to be unfolded in a world of possibilities">
+		<meta property="og:image" content="https://0mds.github.io/project-cubes/assets/project-cubes-FFUZAGGC.png">
+		<meta property="og:type" content="website">
+	</head>
+	
+	<body>
+		<div id="error_screen">
+			<img src="assets/project-cubes-FFUZAGGC.png">
+			<div>Error: Please try deactivating private browsing or updating your browser</div>
+		</div>
+		<div id="menu_screen" class="gui active">
+			<div class="main_title">Project Cubes</div>
+			<div id="world_list_header">Worlds:</div>
+			<div id="world_template" class="world"><img src="assets/favicon-AU4ODCYT.svg" class="world_icon" alt=""><div class="world_title"><div></div><div class="small"></div></div><div class="world_operations"><a class="icon edit hover rename" title="Rename"></a><a class="icon download hover export" title="Download"></a><a class="icon delete hover remove" title="Delete"></a></div></div>
+			<div id="world_list"></div>
+			<div id="new_world">
+				<a id="create_world" class="button grey"><i class="icon add left" style="padding: 6px;"></i> Create New World</a>
+				<label for="world_upload" class="button grey"><i class="icon upload left" style="padding: 10px;"></i> Import World</label>
+				<input type="file" id="world_upload" name="world_upload" multiple accept=".json" style="display: none;" />
+			</div>
+			<div><a class="button purple settings"><i class="icon gear left light" style="padding: 10px;"></i> Settings</a></div>
+			<span id="version_info">Project Cubes v1.0.0</span>
+			<span id="copyright_notice">Copyright 2023 0mds</span>
+		</div>
+		
+		<div id="pause_screen" class="gui">
+			<div id="pause_title">
+				<div class="main_title">Project Cubes</div>
+				<div id="unpause_text">Click to begin <i class="icon cursor"></i></div>
+			</div>
+			<a id="menu_return" class="button purple">Back to Menu</a>
+			<a class="button purple settings"><i class="icon gear left light" style="padding: 10px;"></i> Settings</a>
+		</div>
+
+		<div id="info-modal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<div id="modal-title"></div>
+				</div>
+				<div class="modal-body">
+					<div id="modal-text"></div>
+					<input id="modal-input" type="text"></input>
+					<div class="template input setting"><div><div></div><div class="small"></div></div><label class="range"><input type="range" oninput="this.nextElementSibling.textContent = this.value"><span></span></label></div>
+					<div class="template check setting"><div><div></div><div class="small"></div></div><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+					<div id="modal-settings" style="display: none"></div>
+				</div>
+				<div class="modal-footer">
+					<a id="modal-reset" class="modal-button grey" style="display: none;"><i class="icon reset left light" style="padding: 8px;"></i> Reset</a>
+					<a id="modal-cancel" class="modal-button grey">Cancel</a>
+					<a id="modal-confirm" class="modal-button purple">Confirm</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="fps"></div>
+
+		<canvas id="canvas" width="16" height="9" tabindex="1"></canvas>
+	</body>
+</html>

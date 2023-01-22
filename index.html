@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Round</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			
+			html, body {
+				margin: 0;
+				width: 100vw;
+				height: 100vh;
+			}
+			
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: #f1f1f1;
+			}
+			
+			.cube {
+				width: 100px;
+				height: 100px;
+				transform-style: preserve-3d;
+				animation: rotate 4s linear infinite;
+			}
+			
+			@keyframes rotate {
+				from {
+					rotate: 1 1 1 0deg;
+				}
+				to {
+					rotate: 1 1 1 360deg;
+				}
+			}
+			
+			.face {
+				background-color: rgba(0,0,0,0.8);
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				font-size: 100px;
+				text-align: center;
+				border: 1px solid white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="cube">
+			<div class="face" style="transform: rotateY(180deg) translate3d(0, 0, 50px);"></div>
+			<div class="face" style="transform: rotateY(90deg) translate3d(0, 0, 50px);"></div>
+			<div class="face" style="transform: rotateX(-90deg) translate3d(0, 0, 50px);"></div>
+			<div class="face" style="transform: rotateX(90deg) translate3d(0, 0, 50px);"></div>
+			<div class="face" style="transform: rotateY(-90deg) translate3d(0, 0, 50px);"></div>
+			<div class="face" style="transform: translate3d(0, 0, 50px);"></div>
+		</div>
+	</body>
+</html>
