@@ -1,0 +1,1 @@
+.cube{width:60px;height:60px;transform-style:preserve-3d;animation:rotate 4s linear infinite}@keyframes rotate{0%{rotate:1 1 1 0deg}to{rotate:1 1 1 1turn}}.face{background-color:rgba(0,0,0,.8);position:absolute;width:60px;height:60px;line-height:60px;font-size:60px;text-align:center;border:1px solid #ddd}
